@@ -1,0 +1,178 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36" version="28.2.5">
+  <diagram name="Page-1" id="2hvS07ClXG56fBQhliLg">
+    <mxGraphModel dx="2951" dy="1624" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="imY-gkmOk5IuylgXkHaF-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-2" value="HOME" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-8" value="picture" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="160" width="580" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-9" value="general info about the game itself and the basic overview of whats ON the actual website" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="350" width="590" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-10" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="599" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-11" value="HOME" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="599" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-12" value="LORE" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="599" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-13" value="RAIDS" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="599" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-16" value="information reference index, sorted by raid or class" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="660" width="600" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-20" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="80" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-21" value="HOME" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="80" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-22" value="LORE" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="80" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-23" value="RAIDS" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="80" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-25" value="reccomendation for the raid, eg what subclasses and weapons etc, maybe some general build ideas" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="160" width="600" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-26" value="interactive step by step for the raids mechanics" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="350" width="590" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-28" value="LORE" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="80" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-29" value="RAIDS" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="80" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-30" value="CLASSES" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="80" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-31" value="REFERENCES" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="80" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-32" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="80" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-33" value="HOME" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="80" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-34" value="LORE" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="80" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-35" value="RAIDS" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="80" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-36" value="CLASSES" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="80" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-37" value="REFERENCES" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="80" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-38" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="599" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-39" value="HOME" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="599" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-40" value="LORE" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="599" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-41" value="RAIDS" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="599" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-42" value="CLASSES" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="599" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-43" value="REFERENCES" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="599" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-44" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="599" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-45" value="HOME" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="599" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-48" value="LORE" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="599" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-49" value="RAIDS" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="599" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-50" value="CLASSES" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="599" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-51" value="REFERENCES" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="599" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-52" value="Lore from the raid they chose" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="877.5" y="760" width="600" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-53" value="pictures/diagrams etc" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="885" y="1030" width="585" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-54" value="pictures/diagrams etc" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="885" y="650" width="585" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-55" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1654" y="80" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-56" value="HOME" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1654" y="80" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-57" value="image of their chosen class" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1664" y="160" width="116" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-58" value="&amp;nbsp;breakdown of one of the four skilltrees and how its recommended to build around it" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1800" y="160" width="450" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-59" value="LORE" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1774" y="80" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-60" value="RAIDS" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1894" y="80" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-61" value="CLASSES" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2014" y="80" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-62" value="REFERENCES" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2134" y="80" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-64" value="&amp;nbsp;breakdown of one of the four skilltrees and how its recommended to build around it" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1800" y="320" width="450" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-65" value="&amp;nbsp;breakdown of one of the four skilltrees and how its recommended to build around it" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1800" y="400" width="450" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-66" value="&amp;nbsp;breakdown of one of the four skilltrees and how its recommended to build around it" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1800" y="240" width="450" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-68" value="home page" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-69" value="Reference page" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="530" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-71" value="Raid Mechanics page" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1050" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-72" value="Lore/Story page" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1047.5" y="530" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="imY-gkmOk5IuylgXkHaF-73" value="Classes Pages" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1830" width="260" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
