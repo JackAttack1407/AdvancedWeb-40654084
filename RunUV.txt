@@ -1,0 +1,35 @@
+--- all done in command line/terminal
+
+-- set path if not already added to pathing --
+SET PATH =%PATH%; H:\Apps\ or SET PATH =%PATH%; "where ever UV is installed"
+
+--open the Directory /DIR -- 
+
+step 1
+((MAKE SURE ENVIRONMENT HAS BEEN MADE)) 
+uv venv -- creates an environment named .venv
+
+step 2 --ensure backslashes
+.venv\Scripts\activate (to activate the environment)
+(.venv\Scripts\deactivate (turn off the env))
+
+step 3 - check what libraries are installed
+uv pip list
+
+step 4 - install flask if needed
+uv pip install flask
+
+(optional) -check if installed
+uv pip list 
+
+step 5 - run it
+uv run flask --app "appname" run
+
+
+-- to run it in debug mode
+uv run flask --app "appname" run --debug
+
+***dont forget to deactivate the environment***
+**when trying to the env, ensure you have the file open not the folder, eg on
+hello world, ensure ...\lab3\hello> NOT ...\lab3> as it will be unable to create the
+environment with the scripts/app***
