@@ -1,13 +1,13 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 
 ##index page
 @app.route("/")
-def hello():
-	with open("Templates/index.html") as f:
-		return f.read()
+def index():
+	return render_template("index.html")
+
 
 
 ##classes
