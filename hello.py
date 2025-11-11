@@ -10,63 +10,90 @@ def index():
 
 
 
+##overview pages
+@app.route("/Classes")
+def classes():
+	with open("Templates/ClassPagesOverview.html") as f:
+		return f.read()
+
+@app.route("/LorePages")
+def lorepages():
+	with open("Templates/LorePagesOverview.html") as f:
+		return f.read()
+
+
+@app.route("/RaidGuides")
+def raidpages():
+	with open("Templates/RaidGuideOverview.html") as f:
+		return f.read()
+
+
+
 ##classes
-@app.route("/Titan(class)")
+@app.route("/Classes/Titan")
 def titan():
 	with open("Templates/ClassPages/Titan(class).html") as f:
 		return f.read()
 
-@app.route("/Hunter(class)")
+@app.route("/Classes/Hunter")
 def hunter():
 	with open("Templates/ClassPages/Hunter(class).html") as f:
 		return f.read()
 
-@app.route("/Warlock(class)")
+@app.route("/Classes/Warlock")
 def warlock():
 	with open("Templates/ClassPages/Warlock(class).html") as f:
 		return f.read()
 
+
+
 ##lore pages
-@app.route("/CryptLore")
+@app.route("/LorePages/DeepstoneCrypt")
 def cryptlore():
 	with open("Templates/LorePages/CryptLore.html") as f:
 		return f.read()
 
-@app.route("/GardenLore")
+@app.route("/LorePages/GardenOfSalvation")
 def gardenlore():
 	with open("Templates/LorePages/GardenLore.html") as f:
 		return f.read()
 
-@app.route("/LastWishLore")
+@app.route("/LorePages/LastWish")
 def lastwishlore():
 	with open("Templates/LorePages/LastWishLore.html") as f:
 		return f.read()
 
-@app.route("/VOGLore")
+@app.route("/LorePages/VOG")
 def VOGlore():
 	with open("Templates/LorePages/VOGLore.html") as f:
 		return f.read()
 
+
+
+
 ##raid guides
-@app.route("/CryptGuide")
+@app.route("/RaidGuides/DeepstoneCrypt")
 def cryptguide():
 	with open("Templates/RaidPages/CryptGuide.html") as f:
 		return f.read()
 
-@app.route("/GardenGuide")
+@app.route("/RaidGuides/GardenOfSalvation")
 def gardenguide():
 	with open("Templates/RaidPages/GardenGuide.html") as f:
 		return f.read()
 
-@app.route("/LastWishGuide")
+@app.route("/RaidGuides/LastWish")
 def lastwishguide():
 	with open("Templates/RaidPages/LastWishGuide.html") as f:
 		return f.read()
 
-@app.route("/VOGGuide")
+@app.route("/RaidGuides/VOG")
 def VOGguide():
 	with open("Templates/RaidPages/VOGGuide.html") as f:
 		return f.read()
+
+
+
 
 ## reference page
 @app.route("/ReferencePage")
