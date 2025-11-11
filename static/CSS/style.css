@@ -1,4 +1,20 @@
 /* --- Reset defaults --- */
+body {
+    background-image: url(../Images/TestImage.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+body.index {
+    background-image: url(../Images/TheTraveler.png);
+}
+ 
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -12,14 +28,15 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.75rem 2rem;
+    padding:0.4rem 2rem;
+    flex-wrap: wrap;
 }
 
 /* --- Logo container --- */
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 0.5rem; /* Space between image and text */
+    text-decoration: none;
 }
 
 /* --- Logo text --- */
@@ -31,7 +48,8 @@ nav {
 
 /* --- Logo image --- */
 .logo-img {
-    height: 40px; /* Adjust size of your logo */
+    height: 40px;
+    margin-right:10px;
     width: auto;
 }
 
@@ -39,13 +57,13 @@ nav {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    gap: 4rem;
 }
 
     .nav-links a {
         text-decoration: none;
         color: white;
-        font-size: 1rem;
+        font-size: 1.5rem;
         transition: color 0.2s ease;
     }
 
@@ -53,20 +71,50 @@ nav {
             color: #00bcd4;
         }
 
-/* --- Responsive: stack links on small screens --- */
-@media (max-width: 600px) {
+.background-index {
+    background-image: url(../Images/ThePyramid.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    
+
+}
+
+.container1{
+    background-color: rgb(255, 0, 0);
+    padding: 5px;
+    border-radius: 5px;
+    width: fit-content;
+    margin: 10px 0px;
+
+}
+
+/* --- css for if the device is smaller than 800px --- */
+@media (max-width: 6=800px) {
     nav {
         flex-direction: column;
         align-items: flex-start;
+        padding:1rem 1.5rem;
     }
 
     .nav-links {
         flex-direction: column;
-        gap: 0.75rem;
+        gap: 2rem;
         margin-top: 0.5rem;
+        width:100%;
     }
 
     .logo-container {
         margin-bottom: 0.5rem;
+    }
+
+    .logo-text {
+        font-size:1.2rem;
+    }
+
+    .logo-img {
+        height:35px
     }
 }
