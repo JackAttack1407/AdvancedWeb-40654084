@@ -9,7 +9,7 @@ body {
 
 
 body.index {
-    background-image: url(../Images/TheTraveler.png);
+    background-image: url(../Images/IndexBG.png);
 }
  
 
@@ -82,7 +82,7 @@ nav {
 
 }
 
-.container1{
+.container1 {
     background-color: rgb(255, 0, 0);
     padding: 5px;
     border-radius: 5px;
@@ -91,6 +91,11 @@ nav {
 
 }
 
+.indexDescription {
+    color: white;
+
+
+}
 /* --- css for if the device is smaller than 800px --- */
 @media (max-width: 6=800px) {
     nav {

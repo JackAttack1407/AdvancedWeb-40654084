@@ -12,8 +12,8 @@
 
 
 
-<body class = "index">
-
+<body class="index">
+    
     <nav>
         <div class="logo-container">
             <a href="/">
@@ -27,6 +27,24 @@
             <li><a href="/ReferencePage">references</a></li>
         </ul>
     </nav>
+
+    <div class="indexDescription" id="indexDescription">
+              desc = "i am a displaued if cant read csv"
+    </div>
+
+    <script>
+        fetch("../static/Data/D2data.csv")
+            .then(res => res.text())
+                .then(csvText => {
+                    const rows = csvText.split("\n").map(r => r.split(","));
+                    const singleCell = rows[1][0];
+                    document.getElementById("indexDescription").textContent = singleCell
+                });
+    </script>
+
+
+
+
 
 
     <!-- classes -->
@@ -109,5 +127,5 @@
             <a href="/ReferencePage" class="button">Reference Page</a>
         </section>
     </div>
-</bodyclass>
+</body>
 </html>
