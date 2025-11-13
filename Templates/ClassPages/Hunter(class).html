@@ -1,1 +1,27 @@
-Congrats you picked hunter
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destiny 2 Wiki</title>
+
+    <!-- static CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+</head>
+
+<body class="hunter">
+
+<nav>
+    <div class="logo-container">
+        <a href="/">
+            <img src="{{url_for('static', filename='Images/TheTraveler.png')}}" alt="LOGO" class="logo-img"><span class="logo-text">Destiny 2 wiki</span><img src="{{url_for('static', filename='Images/ThePyramid.png')}}" alt="LOGO" class="logo-img">
+        </a>
+    </div>
+    <ul class="nav-links">
+        <li><a href="/Classes">Classes</a></li>
+        <li><a href="/LorePages">Lore Pages</a></li>
+        <li><a href="/RaidGuides">Raid Guides</a></li>
+        <li><a href="/ReferencePage">references</a></li>
+    </ul>
+</nav>
+    Congrats you picked hunter
+</body>

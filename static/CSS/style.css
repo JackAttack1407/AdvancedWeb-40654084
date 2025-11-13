@@ -12,8 +12,18 @@ body.index {
     background-image: url(../Images/IndexBG.png);
 }
  
-
-
+body.hunter {
+    background-image: url(../Images/HunterBG.png);
+}
+ 
+body.titan {
+    background-image: url(../Images/TitanBG.png);
+}
+ 
+body.warlock {
+    background-image: url(../Images/WarlockBG.png);
+}
+ 
 
 * {
     margin: 0;
