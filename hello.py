@@ -13,60 +13,50 @@ def index():
 ##overview pages
 @app.route("/Classes")
 def classes():
-	with open("Templates/ClassPagesOverview.html") as f:
-		return f.read()
+	return render_template("ClassPagesOverview.html")
 
 @app.route("/LorePages")
 def lorepages():
-	with open("Templates/LorePagesOverview.html") as f:
-		return f.read()
+	return render_template("LorePagesOverview.html")
 
 
 @app.route("/RaidGuides")
 def raidpages():
-	with open("Templates/RaidGuideOverview.html") as f:
-		return f.read()
+	return render_template("RaidGuideOverview.html")
 
 
 
 ##classes
 @app.route("/Classes/Titan")
 def titan():
-	with open("Templates/ClassPages/Titan(class).html") as f:
-		return f.read()
+	return render_template("ClassPages/Titan(class).html")
 
 @app.route("/Classes/Hunter")
 def hunter():
-	with open("Templates/ClassPages/Hunter(class).html") as f:
-		return f.read()
+	return render_template("ClassPages/Hunter(class).html")
 
 @app.route("/Classes/Warlock")
 def warlock():
-	with open("Templates/ClassPages/Warlock(class).html") as f:
-		return f.read()
+	return render_template("ClassPages/Warlock(class).html")
 
 
 
 ##lore pages
 @app.route("/LorePages/DeepstoneCrypt")
 def cryptlore():
-	with open("Templates/LorePages/CryptLore.html") as f:
-		return f.read()
+	return render_template("LorePages/CryptLore.html")
 
 @app.route("/LorePages/GardenOfSalvation")
 def gardenlore():
-	with open("Templates/LorePages/GardenLore.html") as f:
-		return f.read()
+	return render_template("LorePages/GardenLore.html")
 
 @app.route("/LorePages/LastWish")
 def lastwishlore():
-	with open("Templates/LorePages/LastWishLore.html") as f:
-		return f.read()
+	return render_template("LorePages/LastWishLore.html")
 
 @app.route("/LorePages/VOG")
 def VOGlore():
-	with open("Templates/LorePages/VOGLore.html") as f:
-		return f.read()
+	return render_template("LorePages/VOGLore.html")
 
 
 
@@ -74,23 +64,19 @@ def VOGlore():
 ##raid guides
 @app.route("/RaidGuides/DeepstoneCrypt")
 def cryptguide():
-	with open("Templates/RaidPages/CryptGuide.html") as f:
-		return f.read()
+	return render_template("RaidPages/CryptGuide.html")
 
 @app.route("/RaidGuides/GardenOfSalvation")
 def gardenguide():
-	with open("Templates/RaidPages/GardenGuide.html") as f:
-		return f.read()
+	return render_template("RaidPages/GardenGuide.html")
 
 @app.route("/RaidGuides/LastWish")
 def lastwishguide():
-	with open("Templates/RaidPages/LastWishGuide.html") as f:
-		return f.read()
+	return render_template("RaidPages/LastWishGuide.html")
 
 @app.route("/RaidGuides/VOG")
 def VOGguide():
-	with open("Templates/RaidPages/VOGGuide.html") as f:
-		return f.read()
+	return render_template("RaidPages/VOGGuide.html")
 
 
 
@@ -98,5 +84,4 @@ def VOGguide():
 ## reference page
 @app.route("/ReferencePage")
 def refpage():
-	with open("Templates/ReferencePage.html") as f:
-		return f.read()
+	return render_template("ReferencePage.html")
