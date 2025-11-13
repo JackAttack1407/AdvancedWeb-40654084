@@ -24,6 +24,18 @@ body.warlock {
     background-image: url(../Images/WarlockBG.png);
 }
  
+.buttons {
+    margin-top: 10px;
+}
+button {
+    background-color: red;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+
+
 
 * {
     margin: 0;

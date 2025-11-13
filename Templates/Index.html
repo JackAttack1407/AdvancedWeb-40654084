@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,17 +8,20 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
 </head>
 
-
-
-<body class="index">
-    
+<body class="hunter">
+    <!-- nav bar -->
     <nav>
         <div class="logo-container">
+            <!-- link to home page with images-->
             <a href="/">
-                <img src="{{url_for('static', filename='Images/TheTraveler.png')}}" alt="LOGO" class="logo-img"><span class="logo-text">Destiny 2 wiki</span><img src="{{url_for('static', filename='Images/ThePyramid.png')}}" alt="LOGO" class="logo-img">
+                <img src="{{url_for('static', filename='Images/TheTraveler.png')}}" alt="LOGO" class="logo-img"><!-- left image -->
+                <span class="logo-text">Destiny 2 wiki</span>  <!-- home text -->
+                <img src="{{url_for('static', filename='Images/ThePyramid.png')}}" alt="LOGO" class="logo-img">  <!-- right image -->
             </a>
         </div>
+
         <ul class="nav-links">
+            <!--all the links to hub pages-->
             <li><a href="/Classes">Classes</a></li>
             <li><a href="/LorePages">Lore Pages</a></li>
             <li><a href="/RaidGuides">Raid Guides</a></li>
@@ -28,18 +29,21 @@
         </ul>
     </nav>
 
+
+    <!--div that displays the main pages description-->
     <div class="indexDescription" id="indexDescription">
-              desc = "i am a displaued if cant read csv"
+        desc = "i am a displaued if cant read csv"<!--error messgae-->
     </div>
 
     <script>
-        fetch("../static/Data/D2data.csv")
-            .then(res => res.text())
-                .then(csvText => {
-                    const rows = csvText.split("\n").map(r => r.split(","));
-                    const singleCell = rows[1][0];
-                    document.getElementById("indexDescription").textContent = singleCell
-                });
+        fetch("../static/Data/D2index.csv")//fetch
+            .then(res => res.text()) //read as text
+            .then(csvText => { //basic data handling for csv
+                const rows = csvText.split("\n") //split rows
+                    .map(r => r.split(","));//split row into collumns
+                const singleCell = rows[1][0]; //get first row/cell
+                document.getElementById("indexDescription").textContent = singleCell//output
+            });
     </script>
 
 

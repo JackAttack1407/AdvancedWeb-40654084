@@ -9,19 +9,82 @@
 </head>
 
 <body class="hunter">
+    <!-- nav bar -->
+    <nav>
+        <div class="logo-container">  <!-- link to home page with images-->
+            <a href="/">
+                <img src="{{url_for('static', filename='Images/TheTraveler.png')}}" alt="LOGO" class="logo-img"><!-- left image -->
+                <span class="logo-text">Destiny 2 wiki</span>  <!-- home text -->
+                <img src="{{url_for('static', filename='Images/ThePyramid.png')}}" alt="LOGO" class="logo-img">  <!-- right image -->
+            </a>
+        </div>
 
-<nav>
-    <div class="logo-container">
-        <a href="/">
-            <img src="{{url_for('static', filename='Images/TheTraveler.png')}}" alt="LOGO" class="logo-img"><span class="logo-text">Destiny 2 wiki</span><img src="{{url_for('static', filename='Images/ThePyramid.png')}}" alt="LOGO" class="logo-img">
-        </a>
+        <ul class="nav-links"><!--all the links to hub pages-->
+            <li><a href="/Classes">Classes</a></li>
+            <li><a href="/LorePages">Lore Pages</a></li>
+            <li><a href="/RaidGuides">Raid Guides</a></li>
+            <li><a href="/ReferencePage">references</a></li>
+        </ul>
+    </nav>
+    <!-- <div> that display hunter description-->
+    <div class="hunterdesc" id="hunterdescription">
+        desc = "i am a displayed if cant read csv"<!--error text -->
     </div>
-    <ul class="nav-links">
-        <li><a href="/Classes">Classes</a></li>
-        <li><a href="/LorePages">Lore Pages</a></li>
-        <li><a href="/RaidGuides">Raid Guides</a></li>
-        <li><a href="/ReferencePage">references</a></li>
-    </ul>
-</nav>
-    Congrats you picked hunter
+    <script>
+        fetch("../static/Data/HunterClass.csv")//fetch data
+            .then(res => res.text()) //read as text
+            .then(csvText => { //alot simpler data handling than required later as only one cell is called
+                const rows = csvText.split("\n") //split into rows using \n
+                    .map(r => r.split(","));//split each row into columns
+                const singleCell = rows[1][0]; //get first row of required data
+                document.getElementById("hunterdescription").textContent = singleCell //output the data to the <div>
+            });
+    </script>
+
+    <!--- steps is [*][2], ids is [*][1] and descriptions is [*][0]-->
+    <div class="hunterdesc2" id="hunterdescription2">
+        Press next to start cycling through hunter data
+    </div>
+
+    <div class="buttons">
+        <button id="BackBtn">back</button> <!--create buttons on screen-->
+        <button id="NextBtn">next</button>
+    </div>
+
+    <script>
+        let currentRow = 1 //starting at row first row of data
+        let rows = []; // holds all the csv rows as an array
+
+        fetch("../static/Data/HunterClass.csv") //fetching data
+            .then(res => res.text()) //read as text
+            .then(csvText => {
+                rows = csvText.trim() // remove whitespace/new lines
+                    .split("\n") //split into rows using \n
+                    .map(r => r.split(",")) //split each row into columns
+                    .filter(row => row.length > 1); //remove blank rows
+                showRow(index); //display the initial row
+            });
+
+        //display current row of index
+        function showRow(index) {
+            const totalRows = rows.length - 1; // first row of data after header
+            const headerRemove = 1; // last row of data
+
+            //looping logic for buttons
+            if (index < headerRemove) index = totalRows;// if index > last row, start at first
+            if (index > totalRows) index = headerRemove;// if index < first row, go to last row
+            currentRow = index //updated the current tracker
+
+            const singleCell = rows[currentRow][0]; // column 0 is desc
+            document.getElementById("hunterdescription2").textContent = singleCell // data into the <div>
+        }
+
+        //button logic
+        document.getElementById("BackBtn").addEventListener("click", () => { //if button clicked do
+            showRow(currentRow - 1); //show prev row
+        });
+        document.getElementById("NextBtn").addEventListener("click", () => { //if button clicked do
+            showRow(currentRow + 1); //show next row
+        });
+    </script>
 </body>
