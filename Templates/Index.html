@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destiny 2 Wiki</title>
+
+    <!-- static CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+</head>
+
+
+
+<body class="index">
+    
+    <nav>
+        <div class="logo-container">
+            <a href="/">
+                <img src="{{url_for('static', filename='Images/TheTraveler.png')}}" alt="LOGO" class="logo-img"><span class="logo-text">Destiny 2 wiki</span><img src="{{url_for('static', filename='Images/ThePyramid.png')}}" alt="LOGO" class="logo-img">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/Classes">Classes</a></li>
+            <li><a href="/LorePages">Lore Pages</a></li>
+            <li><a href="/RaidGuides">Raid Guides</a></li>
+            <li><a href="/ReferencePage">references</a></li>
+        </ul>
+    </nav>
+
+    <div class="indexDescription" id="indexDescription">
+              desc = "i am a displaued if cant read csv"
+    </div>
+
+    <script>
+        fetch("../static/Data/D2data.csv")
+            .then(res => res.text())
+                .then(csvText => {
+                    const rows = csvText.split("\n").map(r => r.split(","));
+                    const singleCell = rows[1][0];
+                    document.getElementById("indexDescription").textContent = singleCell
+                });
+    </script>
+
+
+
+
+
+
+    <!-- classes -->
+    <div class="container1">
+        <section id="Titan-section" class="Titan-section">
+            <a href="/Classes/Titan" class="button">TITAN</a>
+        </section>
+    </div>
+
+    <div class="container1">
+        <section id="Hunter-section" class="Hunter-section">
+            <a href="/Classes/Hunter" class="button">HUNTER</a>
+        </section>
+    </div>
+
+    <div class="container1">
+        <section id="Warlock-section" class="Warlock-section">
+            <a href="/Classes/Warlock" class="button">WARLOCK(best)</a>
+        </section>
+    </div>
+
+
+    <!-- Lore Pages -->
+    <div class="container1">
+        <section id="CryptLore-section" class="CrpytLore-section">
+            <a href="/LorePages/DeepstoneCrypt" class="button">Deepstone Crypt Lore</a>
+        </section>
+    </div>
+
+    <div class="container1">
+        <section id="GardenLore-section" class="CrpytLore-section">
+            <a href="/LorePages/GardenOfSalvation" class="button">Garden of SalvationLore</a>
+        </section>
+    </div>
+
+    <div class="container1">
+        <section id="LastWishLore-section" class="LastWishLore-section">
+            <a href="/LorePages/LastWish" class="button">Last Wish Lore</a>
+        </section>
+    </div>
+
+    <div class="container1">
+        <section id="VOGLore-section" class="VOGLore-section">
+            <a href="/LorePages/VOG" class="button">Vault of Glass Lore</a>
+        </section>
+    </div>
+
+
+
+    <!-- raid guides -->
+    <div class="container1">
+        <section id="CryptGuide-section" class="CryptGuide-section">
+            <a href="/RaidGuides/DeepstoneCrypt" class="button">DeepStone Crypt Raid Guide</a>
+        </section>
+    </div>
+
+    <div class="container1">
+        <section id="GardenGuide-section" class="GardenGuide-section">
+            <a href="/RaidGuides/GardenOfSalvation" class="button">Garden of Salvation Raid Guide</a>
+        </section>
+    </div>
+
+    <div class="container1">
+        <section id="LastWishGuide-section" class="LastWishGuide-section">
+            <a href="/RaidGuides/LastWish" class="button">Last Wish Raid Guide</a>
+        </section>
+    </div>
+
+    <div class="container1">
+        <section id="VOGGuide-section" class="VOGGuide-section">
+            <a href="/RaidGuides/VOG" class="button">Vault of Glass Raid Guide</a>
+        </section>
+    </div>
+
+
+
+    <!-- reference pages -->
+    <div class="container1">
+        <section id="RefPage-section" class="RefPage-section">
+            <a href="/ReferencePage" class="button">Reference Page</a>
+        </section>
+    </div>
+</body>
+</html>
