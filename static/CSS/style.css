@@ -119,7 +119,7 @@ nav {
 
 }
 /* --- css for if the device is smaller than 800px --- */
-@media (max-width: 6=800px) {
+@media (max-width: 60px 800px) {
     nav {
         flex-direction: column;
         align-items: flex-start;

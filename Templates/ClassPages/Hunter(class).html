@@ -11,7 +11,8 @@
 <body class="hunter">
     <!-- nav bar -->
     <nav>
-        <div class="logo-container">  <!-- link to home page with images-->
+        <div class="logo-container">
+            <!-- link to home page with images-->
             <a href="/">
                 <img src="{{url_for('static', filename='Images/TheTraveler.png')}}" alt="LOGO" class="logo-img"><!-- left image -->
                 <span class="logo-text">Destiny 2 wiki</span>  <!-- home text -->
@@ -19,7 +20,8 @@
             </a>
         </div>
 
-        <ul class="nav-links"><!--all the links to hub pages-->
+        <ul class="nav-links">
+            <!--all the links to hub pages-->
             <li><a href="/Classes">Classes</a></li>
             <li><a href="/LorePages">Lore Pages</a></li>
             <li><a href="/RaidGuides">Raid Guides</a></li>
@@ -43,40 +45,56 @@
 
     <!--- steps is [*][2], ids is [*][1] and descriptions is [*][0]-->
     <div class="hunterdesc2" id="hunterdescription2">
-        Press next to start cycling through hunter data
+        Choose a subclass you want to learn about
     </div>
 
+    <!--create buttons on screen-->
     <div class="buttons">
-        <button id="BackBtn">back</button> <!--create buttons on screen-->
+        <button id="SolarBtn">SOLAR</button>
+        <button id="ArcBtn">ARC</button>
+        <button id="VoidBtn">VOID</button>
+        <button id="BackBtn">back</button>
         <button id="NextBtn">next</button>
     </div>
 
     <script>
         let currentRow = 1 //starting at row first row of data
         let rows = []; // holds all the csv rows as an array
+        let filteredRows = [];
 
-        fetch("../static/Data/HunterClass.csv") //fetching data
-            .then(res => res.text()) //read as text
-            .then(csvText => {
-                rows = csvText.trim() // remove whitespace/new lines
-                    .split("\n") //split into rows using \n
-                    .map(r => r.split(",")) //split each row into columns
-                    .filter(row => row.length > 1); //remove blank rows
-                showRow(index); //display the initial row
-            });
+        function LoadCSV(SubclassName) {
+            currentRow = 0;
 
+            fetch("../static/Data/Subclasses/HunterSubclassData.csv") //fetching data
+                .then(res => res.text()) //read as text
+                .then(csvText => {
+
+                    rows = csvText.trim() // remove whitespace/new lines
+                        .split("\n") //split into rows using \n
+                        .map(r => r.split(",")) //split each row into columns
+                        .filter(row => row.length > 1); //remove blank rows
+
+                    const header = rows.shift(); //remove headers
+
+                    filteredRows = rows.filter(r => r[0] === SubclassName); //filter rows for subclass name eg void
+
+                    showRow(0); //display row
+                });
+        }
         //display current row of index
         function showRow(index) {
-            const totalRows = rows.length - 1; // first row of data after header
-            const headerRemove = 1; // last row of data
+            if (filteredRows.length === 0) { //if no rows of data
+                document.getElementById("hunterdescription2").textContent = "no data for this subclass"; //error message
+                return;
+            }
 
-            //looping logic for buttons
-            if (index < headerRemove) index = totalRows;// if index > last row, start at first
-            if (index > totalRows) index = headerRemove;// if index < first row, go to last row
+            //looping logic for buttons 
+            if (index < 0) index = filteredRows.length - 1;// if index > last row, start at first
+            if (index > filteredRows.length) index = 0;// if index < first row, go to last row
             currentRow = index //updated the current tracker
 
-            const singleCell = rows[currentRow][0]; // column 0 is desc
-            document.getElementById("hunterdescription2").textContent = singleCell // data into the <div>
+            const singleCell = filteredRows[currentRow][1]; // column 1 is desc
+            document.getElementById("hunterdescription2").textContent = singleCell;// data into the <div>
         }
 
         //button logic
@@ -86,5 +104,20 @@
         document.getElementById("NextBtn").addEventListener("click", () => { //if button clicked do
             showRow(currentRow + 1); //show next row
         });
+        document.getElementById("SolarBtn").addEventListener("click", () => { //if button clicked do
+            LoadCSV("Solar"); //change filter
+        });
+        document.getElementById("ArcBtn").addEventListener("click", () => { //if button clicked do
+            LoadCSV("Arc"); //change filter
+        });
+        document.getElementById("VoidBtn").addEventListener("click", () => { //if button clicked do
+            LoadCSV("Void"); // //change filter
+        });
+
+
     </script>
 </body>
+
+
+
+<!-- potential idea for further dev, create a db for each subclass, then copy paste code and have 3 "class boxes" using css to stack them etc-->
