@@ -33,7 +33,7 @@
         desc = "i am a displayed if cant read csv"<!--error text -->
     </div>
     <script>
-        fetch("../static/Data/HunterClass.csv")//fetch data
+        fetch("../static/Data/classes/HunterClass.csv")//fetch data
             .then(res => res.text()) //read as text
             .then(csvText => { //alot simpler data handling than required later as only one cell is called
                 const rows = csvText.split("\n") //split into rows using \n
@@ -65,7 +65,7 @@
         function LoadCSV(SubclassName) {
             currentRow = 0;
 
-            fetch("../static/Data/Subclasses/HunterSubclassData.csv") //fetching data
+            fetch("../static/Data/classes/HunterSubclassData.csv") //fetching data
                 .then(res => res.text()) //read as text
                 .then(csvText => {
 
@@ -118,6 +118,3 @@
     </script>
 </body>
 
-
-
-<!-- potential idea for further dev, create a db for each subclass, then copy paste code and have 3 "class boxes" using css to stack them etc-->
