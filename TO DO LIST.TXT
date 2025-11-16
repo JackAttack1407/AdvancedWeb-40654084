@@ -1,0 +1,15 @@
+fuse HunterClass.csv and HunterSubclass.csv into one csv
+change csv handling to accomodate this
+
+implement similar system for raid guides and lore pages
+use same csv file for all raid guides and same csv for lore pages (2 total csv's)
+and use filtering similar to Hunter(class).html
+
+update all csv's with relevant into
+
+add background images to lore pages and raid guides
+add required css for lore and raid
+
+add graphs and diagrams from og coursework submission doc links (maybe)
+
+use css to make it look nice

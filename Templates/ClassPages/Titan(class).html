@@ -1,3 +1,4 @@
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +9,114 @@
 </head>
 
 <body class="titan">
-
+    <!-- nav bar -->
     <nav>
         <div class="logo-container">
+            <!-- link to home page with images-->
             <a href="/">
-                <img src="{{url_for('static', filename='Images/TheTraveler.png')}}" alt="LOGO" class="logo-img"><span class="logo-text">Destiny 2 wiki</span><img src="{{url_for('static', filename='Images/ThePyramid.png')}}" alt="LOGO" class="logo-img">
+                <img src="{{url_for('static', filename='Images/TheTraveler.png')}}" alt="LOGO" class="logo-img"><!-- left image -->
+                <span class="logo-text">Destiny 2 wiki</span>  <!-- home text -->
+                <img src="{{url_for('static', filename='Images/ThePyramid.png')}}" alt="LOGO" class="logo-img">  <!-- right image -->
             </a>
         </div>
+
         <ul class="nav-links">
+            <!--all the links to hub pages-->
             <li><a href="/Classes">Classes</a></li>
             <li><a href="/LorePages">Lore Pages</a></li>
             <li><a href="/RaidGuides">Raid Guides</a></li>
             <li><a href="/ReferencePage">references</a></li>
         </ul>
     </nav>
-    Congrats you picked Titan
+    <!-- <div> that display titan description-->
+    <div class="titandesc" id="titandescription">
+        desc = "i am a displayed if cant read csv"<!--error text -->
+    </div>
+    <script>
+        fetch("../static/Data/classes/TitanClass.csv")//fetch data
+            .then(res => res.text()) //read as text
+            .then(csvText => { //alot simpler data handling than required later as only one cell is called
+                const rows = csvText.split("\n") //split into rows using \n
+                    .map(r => r.split(","));//split each row into columns
+                const singleCell = rows[1][0]; //get first row of required data
+                document.getElementById("titandescription").textContent = singleCell //output the data to the <div>
+            });
+    </script>
+
+    <!--- steps is [*][2], ids is [*][1] and descriptions is [*][0]-->
+    <div class="titandesc2" id="titandescription2">
+        Choose a subclass you want to learn about
+    </div>
+
+    <!--create buttons on screen-->
+    <div class="buttons">
+        <button id="SolarBtn">SOLAR</button>
+        <button id="ArcBtn">ARC</button>
+        <button id="VoidBtn">VOID</button>
+        <button id="BackBtn">back</button>
+        <button id="NextBtn">next</button>
+    </div>
+
+    <script>
+        let currentRow = 1 //starting at row first row of data
+        let rows = []; // holds all the csv rows as an array
+        let filteredRows = [];
+
+        function LoadCSV(SubclassName) {
+            currentRow = 0;
+
+            fetch("../static/Data/classes/TitanSubclassData.csv") //fetching data
+                .then(res => res.text()) //read as text
+                .then(csvText => {
+
+                    rows = csvText.trim() // remove whitespace/new lines
+                        .split("\n") //split into rows using \n
+                        .map(r => r.split(",")) //split each row into columns
+                        .filter(row => row.length > 1); //remove blank rows
+
+                    const header = rows.shift(); //remove headers
+
+                    filteredRows = rows.filter(r => r[0] === SubclassName); //filter rows for subclass name eg void
+
+                    showRow(0); //display row
+                });
+        }
+        //display current row of index
+        function showRow(index) {
+            if (filteredRows.length === 0) { //if no rows of data
+                document.getElementById("titandescription2").textContent = "no data for this subclass"; //error message
+                return;
+            }
+
+            //looping logic for buttons 
+            if (index < 0) index = filteredRows.length - 1;// if index > last row, start at first
+            if (index > filteredRows.length) index = 0;// if index < first row, go to last row
+            currentRow = index //updated the current tracker
+
+            const singleCell = filteredRows[currentRow][1]; // column 1 is desc
+            document.getElementById("titandescription2").textContent = singleCell;// data into the <div>
+        }
+
+        //button logic
+        document.getElementById("BackBtn").addEventListener("click", () => { //if button clicked do
+            showRow(currentRow - 1); //show prev row
+        });
+        document.getElementById("NextBtn").addEventListener("click", () => { //if button clicked do
+            showRow(currentRow + 1); //show next row
+        });
+        document.getElementById("SolarBtn").addEventListener("click", () => { //if button clicked do
+            LoadCSV("Solar"); //change filter
+        });
+        document.getElementById("ArcBtn").addEventListener("click", () => { //if button clicked do
+            LoadCSV("Arc"); //change filter
+        });
+        document.getElementById("VoidBtn").addEventListener("click", () => { //if button clicked do
+            LoadCSV("Void"); // //change filter
+        });
+
+
+    </script>
 </body>
+
+
+
