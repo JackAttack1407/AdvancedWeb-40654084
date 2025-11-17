@@ -24,6 +24,18 @@ body.warlock {
     background-image: url(../Images/WarlockBG.png);
 }
  
+.buttons {
+    margin-top: 10px;
+}
+button {
+    background-color: red;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+
+
 
 * {
     margin: 0;
@@ -107,7 +119,7 @@ nav {
 
 }
 /* --- css for if the device is smaller than 800px --- */
-@media (max-width: 6=800px) {
+@media (max-width: 60px 800px) {
     nav {
         flex-direction: column;
         align-items: flex-start;
