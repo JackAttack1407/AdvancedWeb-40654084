@@ -33,3 +33,6 @@ uv run flask --app "appname" run --debug
 **when trying to the env, ensure you have the file open not the folder, eg on
 hello world, ensure ...\lab3\hello> NOT ...\lab3> as it will be unable to create the
 environment with the scripts/app***
+
+-- to create a reqs.txt 
+uv pip freeze > requirments.txt

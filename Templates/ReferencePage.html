@@ -1,1 +1,69 @@
-get referenced bozo
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destiny 2 Wiki</title>
+
+    <!-- static CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+</head>
+
+<body class="refs">
+    <!-- nav bar -->
+    <nav>
+        <div class="logo-container">
+            <!-- link to home page with images-->
+            <a href="/">
+                <img src="{{url_for('static', filename='Images/TheTraveler.png')}}" alt="LOGO" class="logo-img"><!-- left image -->
+                <span class="logo-text">Destiny 2 wiki</span>  <!-- home text -->
+                <img src="{{url_for('static', filename='Images/ThePyramid.png')}}" alt="LOGO" class="logo-img">  <!-- right image -->
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <!--all the links to hub pages-->
+            <li><a href="/Classes">Classes</a></li>
+            <li><a href="/LorePages">Lore Pages</a></li>
+            <li><a href="/RaidGuides">Raid Guides</a></li>
+            <li><a href="/ReferencePage">references</a></li>
+        </ul>
+    </nav>
+
+    <!--div that displays the main pages description-->
+    <div class="Description" id="referencesID">
+        desc = "i am displayed if can't read csv" <!--error for not taking in csv--->
+    </div>
+
+    <script>
+        fetch("../static/Data/refs.csv") //fetch data
+            .then(res => res.text()) //read as text
+            .then(csvText => { //basic data handling for csv
+                const rows = csvText.split("\n") //split rows
+                    .map(r => r.split(",")); // split each row into columns
+                rows.shift(); // remove header
+
+                const targetId = "referencesID"; // the ID we want
+                // filter all rows that match the target ID
+                const matchedRows = rows.filter(r => r[1].trim() === targetId); //filter for second column
+
+                if (matchedRows.length > 0) {//if statment
+                    // join all matching descriptions with line breaks
+                    const descriptions = matchedRows.map(r => r[0].trim()).join("<br>");
+                    document.getElementById(targetId).innerHTML = descriptions;//puts text with line breaks into HTML elemnt eg - <div>
+                } else {
+                    document.getElementById(targetId).textContent = "desc not found"; // error message for no data
+                }
+            })
+            .catch(err => { //error for taking in csv but cant read
+                console.error("Error reading CSV:", err); //output console error 
+                document.getElementById("referencesID").textContent = "desc not found";//error message
+            });
+    </script>
+
+</body>
+</html>
+
+
+
+
