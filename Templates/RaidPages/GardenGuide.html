@@ -1,1 +1,118 @@
-Garden of salvatio GUide
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destiny 2 Wiki</title>
+
+    <!-- static CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+</head>
+
+<body class="Gardenguide">
+    <!-- nav bar -->
+    <nav>
+        <div class="logo-container">
+            <!-- link to home page with images-->
+            <a href="/">
+                <img src="{{url_for('static', filename='Images/TheTraveler.png')}}" alt="LOGO" class="logo-img"><!-- left image -->
+                <span class="logo-text">Destiny 2 wiki</span>  <!-- home text -->
+                <img src="{{url_for('static', filename='Images/ThePyramid.png')}}" alt="LOGO" class="logo-img">  <!-- right image -->
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <!--all the links to hub pages-->
+            <li><a href="/Classes">Classes</a></li>
+            <li><a href="/LorePages">Lore Pages</a></li>
+            <li><a href="/RaidGuides">Raid Guides</a></li>
+            <li><a href="/ReferencePage">references</a></li>
+        </ul>
+    </nav>
+    <!-- <div> that display description-->
+    <div class="guidedesc" id="guidedescription">
+        desc = "i am a displayed if cant read csv"<!--error text -->
+    </div>
+    <script>
+        fetch("../static/Data/raids/Guides.csv")//fetch data
+            .then(res => res.text()) //read as text
+            .then(csvText => { //alot simpler data handling than required later as only one cell is called
+                const rows = csvText.split("\n") //split into rows using \n
+                    .map(r => r.split(","))//split each row into columns
+                    .filter(r => r.length > 1);
+                const overview = rows.find(r => r[1] === "Gardenoverview"); //get first row of required data
+                document.getElementById("guidedescription").textContent = overview[0]//output the data to the <div>
+
+                LoadCSV("GardenGuide"); //call load csv so the buttons have data
+            });
+    </script>
+
+
+    <div class=GuideExplainer id="button explained">
+        use the buttons to naviagte the raid guide
+    </div>
+
+
+    <div class="guideButtons" id="Description">
+        place holder for raid guide steps
+    </div>
+
+    <!--create buttons on screen-->
+    <div class="buttons">
+        <button id="BackBtn">back</button>
+        <button id="NextBtn">next</button>
+    </div>
+
+    <script>
+        let currentRow = 0 //starting at row first row of data
+        let rows = []; // holds all the csv rows as an array
+        let filteredRows = [];
+
+        function LoadCSV(GuideID) {
+            currentRow = 0;
+
+            fetch("../static/Data/raids/Guides.csv") //fetching data
+                .then(res => res.text()) //read as text
+                .then(csvText => {
+
+                    rows = csvText.trim() // remove whitespace/new lines
+                        .split("\n") //split into rows using \n
+                        .map(r => r.split(",")) //split each row into columns
+                        .filter(row => row.length > 1) //remove blank rows
+                    const header = rows.shift(); //remove headers
+
+                    filteredRows = rows.filter(r => r[1] === GuideID); //filter rows for GuideID
+                    console.log("Filtered rows for", GuideID, ":", filteredRows);
+                    showRow(0); //display row
+
+                });
+        }
+        //display current row of index
+        function showRow(index) {
+            if (filteredRows.length === 0) { //if no rows of data
+                document.getElementById("Description").textContent = "no data for this guide"; //error message
+                return;
+            }
+
+            //looping logic for buttons
+            if (index < 0) index = filteredRows.length - 1;// if index > last row, start at first
+            if (index >= filteredRows.length) index = 0;// if index < first row, go to last row
+            currentRow = index //updated the current tracker
+
+            const description = filteredRows[currentRow][0]; // column 1 is desc
+            document.getElementById("Description").textContent = description;// data into the <div>
+        }
+
+        //button logic
+        document.getElementById("BackBtn").addEventListener("click", () => { //if button clicked do
+            showRow(currentRow - 1); //show prev row
+        });
+        document.getElementById("NextBtn").addEventListener("click", () => { //if button clicked do
+            showRow(currentRow + 1); //show next row
+        });
+
+
+    </script>
+
+</body>
+</html>

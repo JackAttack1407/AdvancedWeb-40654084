@@ -1,21 +1,11 @@
 
-
-implement similar system for raid guides and lore pages (steal from ClassPagesOverview.html)
-use same csv file for all raid guides and same csv for lore pages (2 csv's =  guides.csv and lore.csv)
-and use filtering similar to Hunter(class).html
-
-
 add background images to lore pages and raid guides
 add required css for lore and raid
 
-
-
-hub pages have been added to the Description.csv, add actual yap for index description (overview of whole site)
-and yap for hub pages (overview of each respective type)
-update all csv's with relevant into
+update all csv's with relevant info/yap
 
 
 add graphs and diagrams from og coursework submission doc links (maybe)
 
 
-use css to make it look nice
+use css to make it look nice, update the classes for all div's so they use the css eg - container1
