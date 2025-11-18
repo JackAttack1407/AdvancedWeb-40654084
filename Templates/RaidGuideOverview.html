@@ -1,1 +1,86 @@
-raid gauide overview
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destiny 2 Wiki</title>
+
+    <!-- static CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+</head>
+
+<body class="raidguideO">
+    <!-- nav bar -->
+    <nav>
+        <div class="logo-container">
+            <!-- link to home page with images-->
+            <a href="/">
+                <img src="{{url_for('static', filename='Images/TheTraveler.png')}}" alt="LOGO" class="logo-img"><!-- left image -->
+                <span class="logo-text">Destiny 2 wiki</span>  <!-- home text -->
+                <img src="{{url_for('static', filename='Images/ThePyramid.png')}}" alt="LOGO" class="logo-img">  <!-- right image -->
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <!--all the links to hub pages-->
+            <li><a href="/Classes">Classes</a></li>
+            <li><a href="/LorePages">Lore Pages</a></li>
+            <li><a href="/RaidGuides">Raid Guides</a></li>
+            <li><a href="/ReferencePage">references</a></li>
+        </ul>
+    </nav>
+
+
+    <!--div that displays the main pages description-->
+    <div class="Description" id="RaidPagesODesc">
+        desc = "i am a displayed if cant read csv"<!--error messgae-->
+    </div>
+
+    <script>
+        fetch("../static/Data/Description.csv")//fetch
+            .then(res => res.text()) //read as text
+            .then(csvText => { //basic data handling for csv
+                const rows = csvText.split("\n") //split rows
+                    .map(r => r.split(","));//split row into collumns
+                rows.shift(); //remove header
+                const targetRow = rows.find(r => r[1].trim() === "RaidPagesODesc"); //get first row/cell
+                const singleCell = targetRow ? targetRow[0].trim() : "desc not found"
+                document.getElementById("RaidPagesODesc").textContent = singleCell//output
+
+            });
+    </script>
+
+
+    <!-- raid guides -->
+    <div class="container1">
+        <section id="CryptGuide-section" class="CryptGuide-section">
+            <a href="/RaidGuides/DeepstoneCrypt" class="button">DeepStone Crypt Raid Guide</a>
+        </section>
+    </div>
+
+    <div class="container1">
+        <section id="GardenGuide-section" class="GardenGuide-section">
+            <a href="/RaidGuides/GardenOfSalvation" class="button">Garden of Salvation Raid Guide</a>
+        </section>
+    </div>
+
+    <div class="container1">
+        <section id="LastWishGuide-section" class="LastWishGuide-section">
+            <a href="/RaidGuides/LastWish" class="button">Last Wish Raid Guide</a>
+        </section>
+    </div>
+
+    <div class="container1">
+        <section id="VOGGuide-section" class="VOGGuide-section">
+            <a href="/RaidGuides/VOG" class="button">Vault of Glass Raid Guide</a>
+        </section>
+    </div>
+
+
+
+</body>
+</html>
+
+
+
+

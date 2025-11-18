@@ -1,0 +1,24 @@
+Class,Subclass,Description,Step
+Hunter,Overview,congrats you picked hunter,1
+Hunter,Solar,solar is a lit choice,1
+Hunter,Solar,solar is fire,2
+Hunter,Void,void is pretty cool,1
+Hunter,Void,void continues to be cool,2
+Hunter,Arc,arc is electric,1
+Hunter,Arc,get stunned bozo,2
+
+Titan,Overview,congrats you picked titan,1
+Titan,Solar,solar HAMMAR,1
+Titan,Solar,solar SHIELD,2
+Titan,Void,void SHIELD,1
+Titan,Void,void HAMMAH,2
+Titan,Arc,arc is MISSLE MAN,1
+Titan,Arc,get THUNDA CRUSHED,2
+
+Warlock,Overview,congrats you picked warlock,1
+Warlock,Solar,solar BIG SWORD,1
+Warlock,Solar,solar PHEONIX,2
+Warlock,Void,void GET BOMBED,1
+Warlock,Void,void BLACKHOLE,2
+Warlock,Arc,arc is PALPATINE,1
+Warlock,Arc,get THUNDA BEAMED,2
