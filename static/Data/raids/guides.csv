@@ -1,8 +1,18 @@
 ﻿Descriptions,Ids,step
-congrats you picked hunter,hunterDesc,1
-solar is a lit choice 1,hunterclass1,1
-solar is fire 2,hunterclass1,2
-void is pretty cool 1,hunterclass2,1
-void contiues to be cool 2,hunterclass2,2
-arc is elictric 1,hunterclass3,1
-get stunned 2,hunterclass3,2
+
+the vault of class is a raid that takes place on venus,VOGoverview,1
+use time travel to save a gay guy,VOGGuide,2
+use time travel to save a gay guy2,VOGGuide,3
+
+
+the garden of salvation is not an actual garden ,Gardenoverview,1
+kill the lawnmower,GardenGuide,1
+kill the lawnmower2,GardenGuide,2
+
+big temple on the astral plane,wishoverview,1
+sword fight a dragon,WishGuide,1
+sword fight a dragon2,WishGuide,2
+
+the crpyt is not an actual grave its a lab,Cryptoverview,1
+deepstoneing it,CryptGuide,1
+deepstoneing it2,CryptGuide,2

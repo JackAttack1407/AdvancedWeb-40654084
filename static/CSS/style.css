@@ -75,6 +75,43 @@ body.refs {
 
 
 
+body.VOGLore {
+    background-image: url(../Images/voglore.jpg); /* --- background path for vog lore page---*/
+}
+
+body.WishLore {
+    background-image: url(../Images/lastwishlore.png); /* --- background path for wish lore page---*/
+}
+
+body.GardenLore {
+    background-image: url(../Images/gardenlore.png); /* --- background path for garden lore page---*/
+}
+
+body.CryptLore {
+    background-image: url(../Images/deepstonelore.jpg); /* --- background path for crypt lore page---*/
+}
+
+
+body.VOGguide {
+    background-image: url(../Images/VOG.png); /* --- background path for vog raid guide---*/
+}
+
+body.Wishguide {
+    background-image: url(../Images/LastWish.png); /* --- background path for wish raid guide---*/
+}
+
+body.Gardenguide {
+    background-image: url(../Images/Garden.png); /* --- background path for garden raid guide---*/
+}
+
+body.Cryptguide {
+    background-image: url(../Images/Deepstone.png); /* --- background path for crypt raid guide---*/
+}
+
+
+
+
+
 
 
     /* --- button---*/
