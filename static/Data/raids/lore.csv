@@ -1,9 +1,113 @@
-﻿Descriptions,Ids,step
-
-time travel is a bad idea,VOGLore,1
-
-r2d2 sucks as a lawnmower,GardenLore,1
-
-no genie for bad awokens,WishLore,1
-
-spooky cavern,CryptLore,1
+﻿Descriptions,Ids,Step
+"The Vault of Glass is a Vex structure.",VOGLore,1
+"It is unlike anything else in the universe of Destiny.",VOGLore,2
+"It exists outside conventional reality.",VOGLore,3
+"It resides in a pocket dimension.",VOGLore,4
+"This pocket dimension is where all timelines converge.",VOGLore,5
+"In the Vault, past, present, and future coexist simultaneously.",VOGLore,6
+"Actions taken within the Vault can ripple across reality.",VOGLore,7
+"The Vex have never fully been able to replicate these effects outside the Vault.",VOGLore,8
+"The Vault is not just a fortress.",VOGLore,9
+"It is a temporal crucible.",VOGLore,10
+"It is a place designed to test beings.",VOGLore,11
+"It can manipulate beings.",VOGLore,12
+"In some cases, it can erase beings from existence.",VOGLore,13
+"The Vault embodies the Vex philosophy of control.",VOGLore,14
+"It also embodies the Vex philosophy of inevitability.",VOGLore,15
+"This philosophy contrasts sharply with the Traveler’s Light.",VOGLore,16
+"The Traveler represents free will.",VOGLore,17
+"The Traveler also represents possibility.",VOGLore,18
+"Kabr entered the Vault.",VOGLore,19
+"He sacrificed himself to forge the Aegis.",VOGLore,20
+"He embedded his Light into the Vex constructs.",VOGLore,21
+"This act created a bridge between the Light and the Vex’s temporal manipulations.",VOGLore,22
+"Kabr’s body was destroyed.",VOGLore,23
+"His essence persists in the Vault through the Aegis.",VOGLore,24
+"Praedyth became trapped within the Vault.",VOGLore,25
+"He exists in the fractured corners of time.",VOGLore,26
+"Praedyth is not dead.",VOGLore,27
+"He is erased from conventional reality.",VOGLore,28
+"He is only remembered through residual memories within the Vault itself.",VOGLore,29
+"Pahanin emerged from the Vault.",VOGLore,30
+"He retained only partial memories of his companions.",VOGLore,31
+"Pahanin later created the weapon Super Good Advice.",VOGLore,32
+"This weapon was inspired by Kabr’s sacrifice.",VOGLore,33
+"Some fireteam members were erased entirely from existence.",VOGLore,34
+"The Vault has no record of their names.",VOGLore,35
+"They never truly existed outside of the event itself.",VOGLore,36
+"The Vault brings together all timelines into one unified space.",VOGLore,37
+"The Vex study these timelines.",VOGLore,38
+"They manipulate these timelines.",VOGLore,39
+"They attempt to impose deterministic order.",VOGLore,40
+"It can erase beings from reality.",VOGLore,41
+"It can rewrite timelines.",VOGLore,42
+"This reflects the Vex desire to control fate.",VOGLore,43
+"The Vault functions as a trial for the Light.",VOGLore,44
+"The Vex are obsessed with inevitability.",VOGLore,45
+"They seek to defeat any potential threat across all possible timelines.",VOGLore,46
+"The arrival of Guardians introduces variables the Vex cannot fully calculate.",VOGLore,47
+"The arrival of Guardians introduces variables the Vex cannot fully control.",VOGLore,48
+"The Vault is both a prison and a laboratory.",VOGLore,49
+"Time itself can be weaponized within the Vault.",VOGLore,50
+"The Deep Stone Crypt is a Golden Age facility on Europa.",CryptLore,1
+"It was created by Clovis Bray.",CryptLore,2
+"Clovis Bray was guided by visions from a mysterious anomaly.",CryptLore,3
+"The anomaly was a small black sphere connected to the Darkness.",CryptLore,4
+"Clovis sought a way to achieve eternal life.",CryptLore,5
+"He discovered the Castalia Macula.",CryptLore,6
+"There, he found a veiled statue called Clarity Control.",CryptLore,7
+"Clovis combined Vex technology and 'Vex milk' to stabilize Exo minds indefinitely.",CryptLore,8
+"He built the Crypt beneath Europa to protect this technology.",CryptLore,9
+"The Morning Star orbital station served as a failsafe for the Crypt.",CryptLore,10
+"House Salvation sought to exploit the Crypt centuries later.",CryptLore,11
+"They wanted to create Fallen Exos.",CryptLore,12
+"Atraks became the first Fallen Exo.",CryptLore,13
+"She fused her Fallen consciousness with Exo technology.",CryptLore,14
+"She used nanomachines and dark ether.",CryptLore,15
+"Taniks was similarly resurrected.",CryptLore,16
+"His resurrection used preserved remains and dark ether technology.",CryptLore,17
+"Clarity Control can manipulate energy.",CryptLore,18
+"It can sustain minds.",CryptLore,19
+"It may influence storms on Europa.",CryptLore,20
+"Europa’s thin atmosphere and ice shelves make it harsh.",CryptLore,21
+"Local storms may be influenced by Clarity Control, Vex activity, or cryovolcanism.",CryptLore,22
+"The Morning Star regulates the Crypt’s operations.",CryptLore,23
+"It safeguards the resurrection experiments.",CryptLore,24
+"Clovis Bray aimed for immortality.",CryptLore,25
+"Fallen experiments continued his work centuries later.",CryptLore,26
+"The Deep Stone Crypt is a Golden Age relic.",CryptLore,27
+"It combines human ambition, Fallen cunning, and mysterious cosmic forces.",CryptLore,28
+"The Garden of Salvation raid explores the Vex, Darkness, and Light.",GardenLore,1
+"The Garden is an ancient metaphysical space.",GardenLore,2
+"The Traveler embodies Light.",GardenLore,3
+"Entities like the Winnower embody Darkness.",GardenLore,4
+"The Black Garden is a Vex-created simulation of the Garden.",GardenLore,5
+"It contains flora, fauna, and structures influenced by Vex ideology.",GardenLore,6
+"The Black Garden channels Darkness.",GardenLore,7
+"It is hostile and metaphysically charged.",GardenLore,8
+"The Sol Divisive is a Vex faction within the Garden.",GardenLore,9
+"They diverged from standard Vex ideology.",GardenLore,10
+"They recognize the Garden cannot be conventionally simulated.",GardenLore,11
+"They worship Darkness.",GardenLore,12
+"They perform rituals to harness Darkness.",GardenLore,13
+"The Black Heart lies at the Garden’s center.",GardenLore,14
+"It channels Darkness into the Garden.",GardenLore,15
+"The Pyramid anchors the Garden’s reality.",GardenLore,16
+"It concentrates the Black Heart’s power.",GardenLore,17
+"Guardians enter the raid to disrupt Vex rituals.",GardenLore,18
+"They prevent further empowerment of the Black Heart.",GardenLore,19
+"They protect the balance of Light and Darkness.",GardenLore,20
+"Riven is the last Ahamkara.",WishLore,1
+"She is dragon-like and acausal.",WishLore,2
+"Riven survived the Great Hunt.",WishLore,3
+"She influenced the Dreaming City.",WishLore,4
+"She shaped Mara Sov’s plans.",WishLore,5
+"Her corruption allowed Savathûn’s curse on the Dreaming City.",WishLore,6
+"Riven became a Taken entity.",WishLore,7
+"She retained self-awareness.",WishLore,8
+"She acted as a Wish Dragon.",WishLore,9
+"Her Wall of Wishes consists of 20 plates.",WishLore,10
+"It can generate over four septillion combinations.",WishLore,11
+"Riven manipulated wishes for her own ends.",WishLore,12
+"Her legacy persists in the Ascendant Plane.",WishLore,13
+"Guardians ultimately destroyed her corrupted heart in Last Wish.",WishLore,14

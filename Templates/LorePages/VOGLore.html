@@ -36,17 +36,34 @@
         desc = "i am a displayed if cant read csv"<!--error messgae-->
     </div>
 
-    <script>
-        fetch("../static/Data/raids/lore.csv")//fetch
-            .then(res => res.text()) //read as text
-            .then(csvText => { //basic data handling for csv
-                const rows = csvText.split("\n") //split rows
-                    .map(r => r.split(","));//split row into collumns
-                rows.shift(); //remove header
-                const targetRow = rows.find(r => r[1] === "VOGLore"); //get first row/cell
-                const singleCell = targetRow ? targetRow[0] : "desc not found"
-                document.getElementById("VOGLore").textContent = singleCell//output
+    <!-- load PapaParse library as i made the csv too big, oops -->
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 
+    <script>
+        // fetch and parse CSV using PapaParse
+        fetch("../static/Data/raids/lore.csv")
+            .then(res => res.text()) // read file as text
+            .then(csvText => {
+                Papa.parse(csvText, {
+                    header: true, // first row is header
+                    skipEmptyLines: true, // ignore empty lines
+                    complete: function (results) {
+                        // filter all rows with VOGLore id
+                        const allRows = results.data.filter(r => r.Ids === "VOGLore"); //id = vog lore
+
+                        if (allRows.length > 0) {
+                            // concatenate all Descriptions together
+                            const fullText = allRows.map(r => r.Descriptions).join("\n\n"); //combine everything into one big paragraph
+                            document.getElementById("VOGLore").textContent = fullText; //output the entire relevant css
+                        } else {//if no row is found
+                            document.getElementById("VOGLore").textContent = "desc not found"; //error message
+                        }
+                    }
+                });
+            })
+            .catch(err => { //error message
+                document.getElementById("VOGLore").textContent = "Error loading CSV"; // error message
+                console.error(err); //output error for debugging
             });
     </script>
 

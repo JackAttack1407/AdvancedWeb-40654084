@@ -40,7 +40,7 @@
                 const rows = csvText.split("\n") //split into rows using \n
                     .map(r => r.split(","))//split each row into columns
                     .filter(r => r.length > 1);
-                const overview = rows.find(r => r[1] === "wishoverview"); //get first row of required data
+                const overview = rows.find(r => r[1] === "Wishoverview"); //get first row of required data
                 document.getElementById("guidedescription").textContent = overview[0]//output the data to the <div>
 
                 LoadCSV("WishGuide"); //call load csv so the buttons have data
