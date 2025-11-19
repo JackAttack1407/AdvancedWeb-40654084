@@ -1,9 +1,12 @@
+use css to make the text a good color for the raid guides and lore pagse as some of them currently dont show up well
 
-add background images to lore pages and raid guides
-add required css for lore and raid
+update guides and lore csv with data from word doc on desktop
 
-update all csv's with relevant info/yap
+create data for classes.csv, and add it to the csv
 
+add refs to refs.csc, use og design documents as it has some links
+
+create an executable python file so i dont have to keep typing out the uv run flask --app etc etc
 
 add graphs and diagrams from og coursework submission doc links (maybe)
 
