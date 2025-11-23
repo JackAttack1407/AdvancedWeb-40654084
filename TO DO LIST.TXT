@@ -1,13 +1,6 @@
-
-create data for classes.csv, and add it to the csv, pottentially use papa parse if needed, look at lore pages if needed
-
 use css to make the text a good color for the raid guides and lore pagse as some of them currently dont show up well
 
-add refs to refs.csc, use og design documents as it has some links
-
 create an executable python file so i dont have to keep typing out the uv run flask --app etc etc
-
-add graphs and diagrams from og coursework submission doc links (maybe)
 
 use css to make it look nice, update the classes for all div's so they use the css eg - container1
 

@@ -35,29 +35,43 @@
         desc = "i am displayed if can't read csv" <!--error for not taking in csv--->
     </div>
 
+    <!-- load PapaParse library as i made the csv too big, oops -->
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
     <script>
-        fetch("../static/Data/refs.csv") //fetch data
-            .then(res => res.text()) //read as text
-            .then(csvText => { //basic data handling for csv
-                const rows = csvText.split("\n") //split rows
-                    .map(r => r.split(",")); // split each row into columns
-                rows.shift(); // remove header
+        // fetch and parse CSV using PapaParse
+        fetch("../static/Data/refs.csv")
+            .then(res => res.text()) // read file as text
+            .then(csvText => {
 
-                const targetId = "referencesID"; // the ID we want
-                // filter all rows that match the target ID
-                const matchedRows = rows.filter(r => r[1].trim() === targetId); //filter for second column
+                Papa.parse(csvText, {
+                    header: true, // first row is header
+                    skipEmptyLines: true, // ignore empty lines
 
-                if (matchedRows.length > 0) {//if statment
-                    // join all matching descriptions with line breaks
-                    const descriptions = matchedRows.map(r => r[0].trim()).join("<br>");
-                    document.getElementById(targetId).innerHTML = descriptions;//puts text with line breaks into HTML elemnt eg - <div>
-                } else {
-                    document.getElementById(targetId).textContent = "desc not found"; // error message for no data
-                }
+                    complete: function (results) {
+
+                        // safely filter rows (avoids the undefined .trim() error)
+                        const allRows = results.data.filter(r =>
+                            r.Ids && r.Ids.trim() === "referencesID"
+                        );
+
+                        if (allRows.length > 0) {
+                            // combine all description fields into a single block
+                            const fullText = allRows
+                                .map(r => r.Descriptions)
+                                .join("<br>"); // output as HTML
+
+                            document.getElementById("referencesID").innerHTML = fullText; // display content
+                        } else {
+                            document.getElementById("referencesID").textContent = "desc not found"; //error message
+                        }
+                    }
+                });
+
             })
-            .catch(err => { //error for taking in csv but cant read
-                console.error("Error reading CSV:", err); //output console error 
-                document.getElementById("referencesID").textContent = "desc not found";//error message
+            .catch(err => { //error for loading csv
+                document.getElementById("referencesID").textContent = "Error loading CSV";
+                console.error(err); //output error in console
             });
     </script>
 
