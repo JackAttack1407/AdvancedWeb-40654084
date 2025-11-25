@@ -23,11 +23,11 @@ uv pip install flask
 uv pip list 
 
 step 5 - run it
-uv run flask --app "appname" run
+uv run flask --app web.py run
 
 
 -- to run it in debug mode
-uv run flask --app "appname" run --debug
+uv run flask --app web.py run --debug
 
 ***dont forget to deactivate the environment***
 **when trying to the env, ensure you have the file open not the folder, eg on

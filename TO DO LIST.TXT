@@ -1,7 +1,0 @@
-use css to make the text a good color for the raid guides and lore pagse as some of them currently dont show up well
-
-create an executable python file so i dont have to keep typing out the uv run flask --app etc etc
-
-use css to make it look nice, update the classes for all div's so they use the css eg - container1
-
-use ai to make the worddoc of raid guides and lore good formatting
