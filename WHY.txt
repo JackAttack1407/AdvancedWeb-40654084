@@ -1,0 +1,4 @@
+the raids guides differs from the lore pages csv handling system as for the raid guide i wanted it to be navigated by button
+however, for the lore pages i wanted a wall of text, this however created csv strings too large for it to handle, so i used papa parse
+
+this was only used for this section and the classes section as before this the, bits of string where not large enough to cause issues

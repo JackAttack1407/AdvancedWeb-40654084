@@ -1,1 +1,87 @@
-Crypt Lore
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destiny 2 Wiki</title>
+
+    <!-- static CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+</head>
+
+<body class="lorepageO">
+    <!-- nav bar -->
+    <nav>
+        <div class="logo-container">
+            <!-- link to home page with images-->
+            <a href="/">
+                <img src="{{url_for('static', filename='Images/TheTraveler.png')}}" alt="LOGO" class="logo-img"><!-- left image -->
+                <span class="logo-text">Destiny 2 wiki</span>  <!-- home text -->
+                <img src="{{url_for('static', filename='Images/ThePyramid.png')}}" alt="LOGO" class="logo-img">  <!-- right image -->
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <!--all the links to hub pages-->
+            <li><a href="/Classes">Classes</a></li>
+            <li><a href="/LorePages">Lore Pages</a></li>
+            <li><a href="/RaidGuides">Raid Guides</a></li>
+            <li><a href="/ReferencePage">references</a></li>
+        </ul>
+    </nav>
+
+
+    <!--div that displays the lore-->
+    <div class="container1" id="CryptLore">
+        desc = "i am a displayed if cant read csv"<!--error messgae-->
+    </div>
+
+
+
+    <!-- load PapaParse library as i made the csv too big, oops -->
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+    <script>
+        // fetch and parse CSV using PapaParse
+        fetch("../static/Data/raids/lore.csv")
+            .then(res => res.text()) // read file as text
+            .then(csvText => {
+                Papa.parse(csvText, {
+                    header: true, // first row is header
+                    skipEmptyLines: true, // ignore empty lines
+                    complete: function (results) {
+                        // filter all rows with CryptLore id
+                        const allRows = results.data.filter(r => r.Ids === "CryptLore"); //id = vog lore
+
+                        if (allRows.length > 0) {
+                            // concatenate all Descriptions together
+                            const fullText = allRows.map(r => r.Descriptions).join("\n\n"); //combine everything into one big paragraph
+                            document.getElementById("CryptLore").textContent = fullText; //output the entire relevant css
+                        } else {//if no row is found
+                            document.getElementById("CryptLore").textContent = "desc not found"; //error message
+                        }
+                    }
+                });
+            })
+            .catch(err => { //error message
+                document.getElementById("CryptLore").textContent = "Error loading CSV"; // error message
+                console.error(err); //output error for debugging
+            });
+    </script>
+
+    <!--link to its raid counterpart-->
+    <div class="container1">
+        <section id="RaidButton" class="RaidGuideButton">
+            <a href="/RaidGuides/DeepstoneCrypt" class="button">Guide me through the raid</a>
+        </section>
+    </div>
+
+
+</body>
+</html>
+
+
+
+
+
+

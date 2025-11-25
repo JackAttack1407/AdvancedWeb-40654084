@@ -1,1 +1,83 @@
-get referenced bozo
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destiny 2 Wiki</title>
+
+    <!-- static CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+</head>
+
+<body class="refs">
+    <!-- nav bar -->
+    <nav>
+        <div class="logo-container">
+            <!-- link to home page with images-->
+            <a href="/">
+                <img src="{{url_for('static', filename='Images/TheTraveler.png')}}" alt="LOGO" class="logo-img"><!-- left image -->
+                <span class="logo-text">Destiny 2 wiki</span>  <!-- home text -->
+                <img src="{{url_for('static', filename='Images/ThePyramid.png')}}" alt="LOGO" class="logo-img">  <!-- right image -->
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <!--all the links to hub pages-->
+            <li><a href="/Classes">Classes</a></li>
+            <li><a href="/LorePages">Lore Pages</a></li>
+            <li><a href="/RaidGuides">Raid Guides</a></li>
+            <li><a href="/ReferencePage">references</a></li>
+        </ul>
+    </nav>
+
+    <!--div that displays the main pages description-->
+    <div class="container1" id="referencesID">
+        desc = "i am displayed if can't read csv" <!--error for not taking in csv--->
+    </div>
+
+    <!-- load PapaParse library as i made the csv too big, oops -->
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+    <script>
+        // fetch and parse CSV using PapaParse
+        fetch("../static/Data/refs.csv")
+            .then(res => res.text()) // read file as text
+            .then(csvText => {
+
+                Papa.parse(csvText, {
+                    header: true, // first row is header
+                    skipEmptyLines: true, // ignore empty lines
+
+                    complete: function (results) {
+
+                        // safely filter rows (avoids the undefined .trim() error)
+                        const allRows = results.data.filter(r =>
+                            r.Ids && r.Ids.trim() === "referencesID"
+                        );
+
+                        if (allRows.length > 0) {
+                            // combine all description fields into a single block
+                            const fullText = allRows
+                                .map(r => r.Descriptions)
+                                .join("<br>"); // output as HTML
+
+                            document.getElementById("referencesID").innerHTML = fullText; // display content
+                        } else {
+                            document.getElementById("referencesID").textContent = "desc not found"; //error message
+                        }
+                    }
+                });
+
+            })
+            .catch(err => { //error for loading csv
+                document.getElementById("referencesID").textContent = "Error loading CSV";
+                console.error(err); //output error in console
+            });
+    </script>
+
+</body>
+</html>
+
+
+
+

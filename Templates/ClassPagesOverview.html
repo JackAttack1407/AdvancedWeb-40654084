@@ -1,1 +1,81 @@
-class overview
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destiny 2 Wiki</title>
+
+    <!-- static CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+</head>
+
+<body class="classpageO">
+    <!-- nav bar -->
+    <nav>
+        <div class="logo-container">
+            <!-- link to home page with images-->
+            <a href="/">
+                <img src="{{url_for('static', filename='Images/TheTraveler.png')}}" alt="LOGO" class="logo-img"><!-- left image -->
+                <span class="logo-text">Destiny 2 wiki</span>  <!-- home text -->
+                <img src="{{url_for('static', filename='Images/ThePyramid.png')}}" alt="LOGO" class="logo-img">  <!-- right image -->
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <!--all the links to hub pages-->
+            <li><a href="/Classes">Classes</a></li>
+            <li><a href="/LorePages">Lore Pages</a></li>
+            <li><a href="/RaidGuides">Raid Guides</a></li>
+            <li><a href="/ReferencePage">references</a></li>
+        </ul>
+    </nav>
+
+
+    <!--div that displays the main pages description-->
+    <div class="container1" id="ClassPagesODesc">
+        desc = "i am a displayed if cant read csv"<!--error messgae-->
+    </div>
+
+    <script>
+        fetch("../static/Data/Description.csv")//fetch
+            .then(res => res.text()) //read as text
+            .then(csvText => { //basic data handling for csv
+                const rows = csvText.split("\n") //split rows
+                    .map(r => r.split(","));//split row into collumns
+                rows.shift(); //remove header
+                const targetRow = rows.find(r => r[1].trim() === "ClassPagesODesc"); //get first row/cell
+                const singleCell = targetRow ? targetRow[0].trim() : "desc not found"
+                document.getElementById("ClassPagesODesc").textContent = singleCell//output
+
+            });
+    </script>
+
+    <!-- classes -->
+    <div class="container1">
+        <section id="Titan-section" class="Titan-section">
+            <a href="/Classes/Titan" class="button">TITAN</a>
+        </section>
+    </div>
+
+    <div class="container1">
+        <section id="Hunter-section" class="Hunter-section">
+            <a href="/Classes/Hunter" class="button">HUNTER</a>
+        </section>
+    </div>
+
+    <div class="container1">
+        <section id="Warlock-section" class="Warlock-section">
+            <a href="/Classes/Warlock" class="button">WARLOCK(best imo)</a>
+        </section>
+    </div>
+
+
+
+</body>
+</html>
+
+
+
+
+
+

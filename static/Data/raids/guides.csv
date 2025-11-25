@@ -1,8 +1,89 @@
 ﻿Descriptions,Ids,step
-congrats you picked hunter,hunterDesc,1
-solar is a lit choice 1,hunterclass1,1
-solar is fire 2,hunterclass1,2
-void is pretty cool 1,hunterclass2,1
-void contiues to be cool 2,hunterclass2,2
-arc is elictric 1,hunterclass3,1
-get stunned 2,hunterclass3,2
+"The Last Wish raid takes place in the Dreaming City and revolves around fighting Taken corruption spread by Riven.",Wishoverview,1
+"Before starting, establish communication for symbols and assigns roles.",WishGuide,1
+"Load into the raid, enter the main doors, and wait for the hidden purple door to open.",WishGuide,2
+"Kali encounter: each player selects a plate symbol such as infinity snake or cloud shape.",WishGuide,3
+"Players stand on clean slices and avoid the boss’s targeted attacks.",WishGuide,4
+"Killing the Taken Knight confirms a correct plate and removes its symbol.",WishGuide,5
+"Incorrect plate activations spawn Taken Ogres and can cause wipes.",WishGuide,6
+"After plate phase, all players stack mid for DPS using swords or burst supers.",WishGuide,7
+"Players avoid wipe attack by identifying which doors under Kali are open.",WishGuide,8
+"Repeat plate and DPS phases until Kali is defeated.",WishGuide,9
+"Shuro Chi encounter: follow her through floors and damage her at each ritual altar.",WishGuide,10
+"Players solve puzzle plates by forming patterns using teacup jumping grids.",WishGuide,11
+"Four assigned puzzle solvers complete patterns simultaneously to progress floors.",WishGuide,12
+"Beware Phalanxes that knock players off platforms.",WishGuide,13
+"Jumping sections require patience, controlled movement, and route awareness.",WishGuide,14
+"Morgeth encounter: manage Taken Strength stacks by picking tornadoes.",WishGuide,15
+"Players cannot hold more than two stacks without dying.",WishGuide,16
+"Use Eye of Riven relic to free trapped teammates who acquire Too Much Strength.",WishGuide,17
+"Assign left and right side teams for stack management.",WishGuide,18
+"Vault phase: navigate rock, stairs, and trees rooms using symbols and tunnels.",WishGuide,19
+"Identify Penumbra and Antumbra buffs based on symbol left or right orientation.",WishGuide,20
+"Dunk buffs on correct plates while avoiding reusing the same one twice.",WishGuide,21
+"Kill Captains to shift darkness walls and open proper doors.",WishGuide,22
+"Riven cheese: sit in wall room and watch shadow to determine attack timing.",WishGuide,23
+"During shadow appearance, count down and attack final stand.",WishGuide,24
+"Use Tractor Cannon to slow Riven and swords to deal huge damage.",WishGuide,25
+"After killing Riven, enter her mouth and destroy the heart.",WishGuide,26
+"Heart relay race: one player carries Riven’s heart while others clear adds.",WishGuide,27
+"Runner swaps occur via teleportation countdown.",WishGuide,28
+"Dream world players collect Taken Strength to reset runner timer.",WishGuide,29
+"Final altar requires everyone to participate in heart carrying and strength collection.",WishGuide,30
+"Success depends on strict communication, timing, and coordination.",WishGuide,31
+
+"The Vault of Glass is a raid located on Venus involving Vex time manipulation.",VOGoverview,1
+"the Opening encounter: is to hold three Vex plates simultaneously to form the spire.",VOGGuide,1
+"Enemies that spawn include Hobgoblins, Minotaurs, Goblins, and Cyclopses.",VOGGuide,2
+"the Secret chest becomes available after door opens. and you need to navigate towards it, find a guide online as this step is extensive but optional",VOGGuide,3
+"next encounter is Conflux defense: waves of enemies try to sacrifice to confluxes in 1–3 locations.",VOGGuide,4
+"wathc out as Fanatics drop green Vex pools that cause Negation debuff.",VOGGuide,5
+"Use cleansing well (warlock ult0 to remove Negation before ritual wipe.",VOGGuide,6
+"the Oracle phase: oracles spawn in a sequence and must be shot in exact order.",VOGGuide,7
+"Callouts include R3, R2, R1, Mid, L1, L2, L3. ( right 1 -> 3 and left 1 -> 3",VOGGuide,8
+"Use long-range weapons like Linears or Xenophage for one-shot oracle kills.",VOGGuide,9
+"next is the Templar boss: a relic holder blocks projectiles, cleanses, and supers the boss to kill them easily",VOGGuide,10
+"Players can block teleport spots to extend boss DPS phases.",VOGGuide,11
+"Detain bubbles must be separated from teammates to avoid wiping the team.",VOGGuide,12
+"Secret path near Templar leads to optional chest.",VOGGuide,13
+"Gorgon maze: avoid detection by crouch walking and following safe path routes.",VOGGuide,14
+"Three vex cubes must be shot for secret chest.",VOGGuide,15
+"Gatekeeper encounter: relic holder kills shielded Minotaurs across portals.",VOGGuide,16
+"Operator debuff prevents immediate portal re-entry, requiring relic swaps.",VOGGuide,17
+"Final Atheon encounter: teleport players must call oracle order for the team.",VOGGuide,18
+"Relic cleanses darkness when inside portal to maintain visibility.",VOGGuide,19
+"After clearing three oracle rounds, the team performs high-damage DPS.",VOGGuide,20
+"Wells and Thundercrashes are ideal for burst damage on Atheon.",VOGGuide,21
+"Kill Atheon to conclude the raid and unlock the Spoils chest.",VOGGuide,22
+
+"The Garden of Salvation raid takes place in the Black Garden and uses tethers aswell as motes of light/dark and sync mechanics.",Gardenoverview,1
+"First encounter uses tethering from box nodes to players to open doors.",GardenGuide,1
+"Teams split into groups managing boss and advancing rooms.",GardenGuide,2
+"Voltaic Overflow buff rotates between players to avoid deaths.",GardenGuide,3
+"Angelic enemies must be defeated to activate tether nodes.",GardenGuide,4
+"Final door requires connecting three symbols using full team tether chains.",GardenGuide,5
+"Boss becomes vulnerable only after shooting glowing facial symbols.",GardenGuide,6
+"Damage phase requires forming tethers from confluxes to stun the boss.",GardenGuide,7
+"Portals open when players shoot specific boss limbs.",GardenGuide,8
+"Players collect motes on islands to deposit into red or blue confluxes.",GardenGuide,9
+"Fully charged confluxes allow damage phase to begin.",GardenGuide,10
+"Managing Cyclops snipers is critical to survival.",GardenGuide,11
+"Stun and damage cycle repeats until the boss is defeated.",GardenGuide,12
+
+"Deep Stone Crypt is a Europa raid featuring three major augments: which are roles the players must do the Operator aswell as the Scanner and the Suppressor.",Cryptoverview,1
+"Desolation: ride sparrows bubble-to-bubble to avoid frostbite death.",CryptGuide,1
+"Use storm shelters to reset frostbite stacks.",CryptGuide,2
+"Final bubble guarded by two Brigs must be cleared.",CryptGuide,3
+"Security encounter: learn 10 basement panels across light and dark.",CryptGuide,4
+"Scanner identifies glowing panels, Operator shoots them.",CryptGuide,5
+"Second phase involves damaging fuses in correct order.",CryptGuide,6
+"Atraks-1: split into space and ground teams.",CryptGuide,7
+"Scanner identifies the correct glowing Atraks clone for DPS.",CryptGuide,8
+"Operator shoots panels to send players between ground and space.",CryptGuide,9
+"Dissent encounter: collect nuclear cores and dunk into correct bins.",CryptGuide,10
+"Suppressor stuns Taniks from three designated drone positions.",CryptGuide,11
+"Prevent third core from spawning by shooting active panel.",CryptGuide,12
+"Taniks final encounter begins by shooting trash pile to start event.",CryptGuide,13
+"Glow engines on Taniks must be shot to drop cores.",CryptGuide,14
+"Players must avoid electric hazards during final stand.",CryptGuide,15
+"Kill Taniks to complete the raid.",CryptGuide,16

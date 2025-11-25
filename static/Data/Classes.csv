@@ -1,0 +1,79 @@
+﻿Class,Subclass,Description,Step
+Hunter,Overview,hunter is a high mobility class for burst dps whose ability recharge times scale from the movement stat,1
+Hunter,Solar,solar revolves around burn damage,1
+Hunter,Solar,solar hunter has 2 main ult types knives for aoe burst damage or golden gun for sinle target both are HIGHLY effective in PVP or PVE so its personal prefarence,2
+Hunter,Solar,Recommended Aspects: Knock 'Em Down + On Your Mark,3
+Hunter,Solar,Knock 'Em Down buffs your knives and restores them on kill while boosting your super damage,4
+Hunter,Solar,On Your Mark gives massive handling and reload speed stacking with precision kills,5
+Hunter,Solar,These two together let you chain knife kills endlessly while keeping weapon swaps buttery smooth,6
+Hunter,Solar,Recommended Exotic Weapon: Sunshot for infinite scorch explosions that fuel all your solar fragments,7
+
+Hunter,Void,void on hunter is mainly for debuffs and invis,1
+Hunter,Void,voids hunter has 2 main ults daggers for single target dps or a bow which tethers and debuffs i reccomend the latter for PVP AND PVE whilst the daggers are only effective in PVP,2
+Hunter,Void,Recommended Aspects: Stylish Executioner + Vanishing Step,3
+Hunter,Void,Stylish Executioner makes you invisible whenever you kill a weakened or volatile target,4
+Hunter,Void,Vanishing Step lets you dip into invis every time you dodge,5
+Hunter,Void,These combine to create a looping invisibility machine that keeps you alive while debuffing everything,6
+Hunter,Void,Recommended Exotic Weapon: Le Monarque for nonstop poison-weaken synergy with Stylish Executioner,7
+
+Hunter,Arc,arc hunter is high burst damage or tick damage,1
+Hunter,Arc,arc hunters two ults either let you roam with a staff or throw down an aoe lightning tick area i dont really reccomend this subclass as its other choices are much more effective,2
+Hunter,Arc,Recommended Aspects: Flow State + Tempest Strike,3
+Hunter,Arc,Flow State gives you jolt, faster reload, faster dodge, and damage resistance when amplified,4
+Hunter,Arc,Tempest Strike lets you slide-melee a thunder shockwave into the next zipcode,5
+Hunter,Arc,Together you become a dodge-sliding AOE lightning lawnmower shredding entire hallways,6
+Hunter,Arc,Recommended Exotic Weapon: Riskrunner for infinite chain-lightning while amplified,7
+
+
+
+Titan,Overview,titan is a tank class whose abilities revolve around zone control and recharge times scale from resilience,1
+Titan,Solar,titan solar revove around huge expolsions and high damage,1
+Titan,Solar,solar titan ults both use hammers however one creates a line aoe and the other is thrown weaponry both are flexible enough to be used in PVP or PVE,2
+Titan,Solar,Recommended Aspects: Sol Invictus + Roaring Flames,3
+Titan,Solar,Sol Invictus spawns sunspots that heal you and scorch enemies whenever you pop things with solar damage,4
+Titan,Solar,Roaring Flames boosts all ability damage the more you kill with abilities,5
+Titan,Solar,Combined you become a sunspot-chugging supernova cycling hammer throws into mini-nukes,6
+Titan,Solar,Recommended Exotic Weapon: Xenophage for high-heat solar detonations that feed your sunspot engine,7
+
+Titan,Void,void titan is versatie as it allows for highy defensive playstyles,1
+Titan,Void,void titans two ults are bubble which creates a defensive aoe or shield which lets you throw a high damage projectile i reccomend the latter for PVP and the previous for PVE but both are flexible,2
+Titan,Void,Recommended Aspects: Offensive Bulwark + Bastion,3
+Titan,Void,Offensive Bulwark boosts ability regen and melee power when inside your overshield,4
+Titan,Void,Bastion gives everyone overshields whenever you pop a barricade,5
+Titan,Void,The synergy is perfect: you barricade → overshield → grenade spam → melee bomb everything,6
+Titan,Void,Recommended Exotic Weapon: Graviton Lance for huge volatile waves and effortless add control,7
+
+Titan,Arc,arc titan is a dps focused subclass,1
+Titan,Arc,arc titans can either hava prolonged mode where they slam the ground and run around or they can be a single hit missle using their body both are effective in both PVP and PVE,2
+Titan,Arc,Recommended Aspects: Touch of Thunder + Juggernaut,3
+Titan,Arc,Touch of Thunder supercharges your grenades turning ionic nades into roaming thunder storms,4
+Titan,Arc,Juggernaut gives you a frontal overshield while sprinting letting you shoulder-charge anything,5
+Titan,Arc,You basically turn into a lightning bulldozer throwing storm grenades that chase enemies across continents,6
+Titan,Arc,Recommended Exotic Weapon: Thunderlord for lightning-chaining chaos that keeps ionic traces flowing,7
+
+
+
+Warlock,Overview,warlock is an aoe and debuff class that revolves around the intelect stat for recharge time,1
+Warlock,Solar,solar warlock revolves around healing and buffing allies,1
+Warlock,Solar,solar warlocks ults either allows them to fly and shoot projectiles OR create an aoe area with healing and damage buffs. for pvp i reccomend flying but for PVE i reccomend well of radiance,2
+Warlock,Solar,Recommended Aspects: Heat Rises + Icarus Dash,3
+Warlock,Solar,Heat Rises lets you float while healing and boosting grenade regeneration when consuming your grenade,4
+Warlock,Solar,Icarus Dash gives you aerial dodges making you the most mobile warlock alive,5
+Warlock,Solar,The synergy lets you become an airborne flamethrower raining ignition grenades from the sky,6
+Warlock,Solar,Recommended Exotic Weapon: Skyburner’s Oath for aerial solar explosions that benefit from Heat Rises,7
+
+Warlock,Void,void warlock revolves around using large aoe explosions to clear out waves of enemies,1
+Warlock,Void,void warlock can either throw a large nova bomb which does single damage or tick damage or finally they can choose to access a mode where they can teleport around and use less powerful explosions centered on the player i reccomend the large bomb for both PVP and PVE,2
+Warlock,Void,Recommended Aspects: Feed the Void + Chaos Accelerant,3
+Warlock,Void,Feed the Void gives devour on ability kills letting you heal from everything forever,4
+Warlock,Void,Chaos Accelerant supercharges your grenades into miniature black holes,5
+Warlock,Void,Combined you become a void artillery piece lobbing gravitational nukes while never dying,6
+Warlock,Void,Recommended Exotic Weapon: Collective Obligation to apply void debuffs constantly and maintain devour uptime,7
+
+Warlock,Arc,arc warlock allows the user to buff and damage deal as a midground for its subtrees,1
+Warlock,Arc,arc warlocks ults either allow it to roam like emperor palpatine or remain stationary but fire a single high dps beam for PVP i reccomend the first but for PVE the latter,2
+Warlock,Arc,Recommended Aspects: Arc Soul + Electrostatic Mind,3
+Warlock,Arc,Arc Soul gives you and your teammates auto-aim lightning buddies,4
+Warlock,Arc,Electrostatic Mind creates ionic traces whenever you jolt or blind enemies,5
+Warlock,Arc,Together they turn you into an amplified storm mage endlessly feeding ability energy back into itself,6
+Warlock,Arc,Recommended Exotic Weapon: Delicate Tomb for nonstop ionic trace generation and jolt spam,7

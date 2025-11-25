@@ -1,3 +1,30 @@
+
+a {
+    text-decoration: none; /* --- base style for all hyperlinks ---*/
+    color: white;
+}
+
+    a:visited {
+        text-decoration: none; /* --- remove underline for already visited sites --- */
+        color: white;
+    }
+
+    a:hover {
+        text-decoration: none; /* --- removes color change for hovering over hyperlink --- */
+        color: white;
+    }
+
+    a:focus {
+        text-decoration: none; /* --- remove color change for when selected by keyboard --- */
+        color: white;
+    }
+
+    a:active { /* --- remove color change for when they are selected --- */
+        text-decoration: none;
+        color: white;
+    }
+
+
 /* --- Reset defaults --- */
 body {
     background-image: url(../Images/TestImage.png);
@@ -6,38 +33,114 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
-
+ 
 
 body.index {
-    background-image: url(../Images/IndexBG.png);
+    background-image: url(../Images/IndexBG.png); /* --- background path for index ---*/
 }
- 
+
 body.hunter {
-    background-image: url(../Images/HunterBG.png);
+    background-image: url(../Images/HunterVoid.png); /* --- background path for hunter class page ---*/
 }
- 
+
 body.titan {
-    background-image: url(../Images/TitanBG.png);
+    background-image: url(../Images/TitanArc.png); /* --- background path for titan class page ---*/
 }
- 
+
 body.warlock {
-    background-image: url(../Images/WarlockBG.png);
+    background-image: url(../Images/WarlockSolar.png); /* --- background path for warlock class page---*/
+}
+
+body.classpageO{
+    background-image: url(../Images/ClassSelection.png); /* --- background path for classes hub page---*/
+    background-position: center 15px
+}
+
+body.raidguideO {
+    background-image: url(../Images/RaidGuides.png); /* --- background path for raid guides hub page---*/
 }
  
-.buttons {
-    margin-top: 10px;
+body.lorepageO {
+    background-image: url(../Images/LorePages.png); /* --- background path for lore pages hub page---*/
 }
+    body.refs {
+        background-image: url(../Images/EndCredsRefs.png);
+    }
+
+
+.loretext {
+    text-decoration: none;
+    color: White;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    padding: 5px;
+    border-radius: 5px;
+    width: 320px;
+    
+}
+
+.indexdesc {
+    text-decoration: none;
+    color: White;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    padding: 200px;
+    border-radius: 5px;
+    margin: 0 auto; /* centers horizontally */
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center; /* vertical */
+    height: 100vh; /* full screen */
+    margin: 0;
+}
+}
+
+
+body.refs {
+    background-image: url(../Images/EndCredsRefs.png); /* --- background path for lore pages hub page---*/
+}
+
+
+
+body.VOGguide {
+    background-image: url(../Images/VOG.png); /* --- background path for vog raid guide---*/
+}
+
+body.Wishguide {
+    background-image: url(../Images/LastWish.png); /* --- background path for wish raid guide---*/
+}
+
+body.Gardenguide {
+    background-image: url(../Images/Garden.png); /* --- background path for garden raid guide---*/
+}
+
+body.Cryptguide {
+    background-image: url(../Images/Deepstone.png); /* --- background path for crypt raid guide---*/
+}
+
+
+    /* --- button---*/
 button {
-    background-color: red;
-    color: black;
+    opacity: 0.7;
+    text-shadow: 5px 5px 10px #000000;
+    background-color: darkslateblue;
+    color: white;
     padding: 10px 20px;
     border-radius: 10px;
 }
 
 
+.container1 {
+    text-decoration: none;
+    color: White;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    padding: 5px;
+    border-radius: 5px;
+    width: fit-content;
+    margin: 10px 0px;
+}
 
 
-* {
+
+* { /* --- auto sets all boxes to use this unless specified otherwise---*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -93,31 +196,13 @@ nav {
             color: #00bcd4;
         }
 
-.background-index {
-    background-image: url(../Images/ThePyramid.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-    
 
-}
-
-.container1 {
-    background-color: rgb(255, 0, 0);
-    padding: 5px;
-    border-radius: 5px;
-    width: fit-content;
-    margin: 10px 0px;
-
-}
-
-.indexDescription {
+.Description {
     color: white;
-
-
 }
+
+
+
 /* --- css for if the device is smaller than 800px --- */
 @media (max-width: 60px 800px) {
     nav {
