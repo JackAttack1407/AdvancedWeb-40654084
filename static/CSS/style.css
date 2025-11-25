@@ -1,6 +1,7 @@
 
 a {
     text-decoration: none; /* --- base style for all hyperlinks ---*/
+    color: white;
 }
 
     a:visited {
@@ -24,10 +25,6 @@ a {
     }
 
 
-
-
-
-
 /* --- Reset defaults --- */
 body {
     background-image: url(../Images/TestImage.png);
@@ -35,8 +32,6 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    
-    
 }
  
 
@@ -45,15 +40,15 @@ body.index {
 }
 
 body.hunter {
-    background-image: url(../Images/HunterBG.png); /* --- background path for hunter class page ---*/
+    background-image: url(../Images/HunterVoid.png); /* --- background path for hunter class page ---*/
 }
 
 body.titan {
-    background-image: url(../Images/TitanBG.png); /* --- background path for titan class page ---*/
+    background-image: url(../Images/TitanArc.png); /* --- background path for titan class page ---*/
 }
 
 body.warlock {
-    background-image: url(../Images/WarlockBG.png); /* --- background path for warlock class page---*/
+    background-image: url(../Images/WarlockSolar.png); /* --- background path for warlock class page---*/
 }
 
 body.classpageO{
@@ -68,28 +63,41 @@ body.raidguideO {
 body.lorepageO {
     background-image: url(../Images/LorePages.png); /* --- background path for lore pages hub page---*/
 }
+    body.refs {
+        background-image: url(../Images/EndCredsRefs.png);
+    }
+
+
+.loretext {
+    text-decoration: none;
+    color: White;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    padding: 5px;
+    border-radius: 5px;
+    width: 320px;
+    
+}
+
+.indexdesc {
+    text-decoration: none;
+    color: White;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    padding: 200px;
+    border-radius: 5px;
+    margin: 0 auto; /* centers horizontally */
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center; /* vertical */
+    height: 100vh; /* full screen */
+    margin: 0;
+}
+}
+
 
 body.refs {
     background-image: url(../Images/EndCredsRefs.png); /* --- background path for lore pages hub page---*/
 }
 
-
-
-body.VOGLore {
-    background-image: url(../Images/voglore.jpg); /* --- background path for vog lore page---*/
-}
-
-body.WishLore {
-    background-image: url(../Images/lastwishlore.png); /* --- background path for wish lore page---*/
-}
-
-body.GardenLore {
-    background-image: url(../Images/gardenlore.png); /* --- background path for garden lore page---*/
-}
-
-body.CryptLore {
-    background-image: url(../Images/deepstonelore.jpg); /* --- background path for crypt lore page---*/
-}
 
 
 body.VOGguide {
@@ -109,19 +117,26 @@ body.Cryptguide {
 }
 
 
-
-
-
-
-
     /* --- button---*/
-    button {
-        background-color: darkslateblue;
-        color: white;
-        padding: 10px 20px;
-        border-radius: 10px;
-    }
+button {
+    opacity: 0.7;
+    text-shadow: 5px 5px 10px #000000;
+    background-color: darkslateblue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
 
+
+.container1 {
+    text-decoration: none;
+    color: White;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    padding: 5px;
+    border-radius: 5px;
+    width: fit-content;
+    margin: 10px 0px;
+}
 
 
 
@@ -180,16 +195,6 @@ nav {
         .nav-links a:hover {
             color: #00bcd4;
         }
-
-.container1 {
-    text-decoration: none;
-    background-color: darkslateblue;
-    color: white;
-    padding: 5px;
-    border-radius: 5px;
-    width: fit-content;
-    margin: 10px 0px;
-}
 
 
 .Description {
